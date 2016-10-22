@@ -81,8 +81,8 @@ Route::get('/posts', function () {
 
 //many to many
 Route::get('/user/{id}/roles', function ($id) {
-   $user = User::find($id);
-    foreach ($user->roles as $role) {
-        echo $role->name . '<br />';
+   $user = User::find($id)->roles()->orderBy('id', 'desc')->get();
+    foreach ($user as $roles) {
+        echo $roles->name . '<br />';
     }
 });

@@ -64,12 +64,12 @@
       <file leaf-file-name="routes.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="84" column="37" selection-start-line="84" selection-start-column="37" selection-end-line="84" selection-end-column="37" />
+            <state relative-caret-position="345">
+              <caret line="85" column="25" selection-start-line="85" selection-start-column="25" selection-end-line="85" selection-end-column="25" />
               <folding>
                 <element signature="e#59#72#0#PHP" expanded="true" />
-                <marker date="1477151548000" expanded="true" signature="1255:1302" ph="INSERT INTO posts... " />
-                <marker date="1477151548000" expanded="true" signature="1266:1302" ph="insert into posts... " />
+                <marker date="1477151848000" expanded="true" signature="1255:1302" ph="INSERT INTO posts... " />
+                <marker date="1477151848000" expanded="true" signature="1266:1302" ph="insert into posts... " />
               </folding>
             </state>
           </provider>
@@ -282,12 +282,12 @@
       <updated>1477063921673</updated>
       <workItem from="1477063924128" duration="779000" />
       <workItem from="1477100252827" duration="756000" />
-      <workItem from="1477140198953" duration="6785000" />
+      <workItem from="1477140198953" duration="7093000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8320000" />
+    <option name="totallyTimeSpent" value="8628000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="6" y="23" width="1245" height="773" extended-state="0" />
@@ -359,8 +359,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#59#72#0#PHP" expanded="true" />
-            <marker date="1477151548000" expanded="true" signature="1255:1302" ph="INSERT INTO posts... " />
-            <marker date="1477151548000" expanded="true" signature="1266:1302" ph="insert into posts... " />
+            <marker date="1477151848000" expanded="true" signature="1255:1302" ph="INSERT INTO posts... " />
+            <marker date="1477151848000" expanded="true" signature="1266:1302" ph="insert into posts... " />
           </folding>
         </state>
       </provider>
@@ -471,12 +471,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="84" column="37" selection-start-line="84" selection-start-column="37" selection-end-line="84" selection-end-column="37" />
+        <state relative-caret-position="345">
+          <caret line="85" column="25" selection-start-line="85" selection-start-column="25" selection-end-line="85" selection-end-column="25" />
           <folding>
             <element signature="e#59#72#0#PHP" expanded="true" />
-            <marker date="1477151548000" expanded="true" signature="1255:1302" ph="INSERT INTO posts... " />
-            <marker date="1477151548000" expanded="true" signature="1266:1302" ph="insert into posts... " />
+            <marker date="1477151848000" expanded="true" signature="1255:1302" ph="INSERT INTO posts... " />
+            <marker date="1477151848000" expanded="true" signature="1266:1302" ph="insert into posts... " />
           </folding>
         </state>
       </provider>
