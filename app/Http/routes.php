@@ -1,6 +1,8 @@
 <?php
 
+//import Modelnya dulu (berlaku di Controller juga)
 use App\Post;
+use App\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -57,5 +59,30 @@ Route::get('insert', function () {
 |--------------------------------------------------------------------------
 | Eloquent Relationship
 |--------------------------------------------------------------------------
+
+//hasOne()
+Route::get('/user/{id}/post', function ($id) {
+    return User::find($id)->post->content;
+});
+//inverse-nya
+Route::get('/post/{id}/user', function ($id) {
+    return Post::find($id)->user->name;
+});
+
+
+Route::get('/posts', function () {
+   $user = User::find(1);
+    foreach ($user->posts as $post) {
+        //kalo pakek return cuma muncul 1
+        echo $post->title . '<br />';
+    }
+});
 */
 
+//many to many
+Route::get('/user/{id}/roles', function ($id) {
+   $user = User::find($id);
+    foreach ($user->roles as $role) {
+        echo $role->name . '<br />';
+    }
+});
