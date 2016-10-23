@@ -3,6 +3,7 @@
 //import Modelnya dulu (berlaku di Controller juga)
 use App\Post;
 use App\User;
+use App\Role;
 
 /*
 |--------------------------------------------------------------------------
@@ -84,5 +85,13 @@ Route::get('/user/{id}/roles', function ($id) {
    $user = User::find($id)->roles()->orderBy('id', 'desc')->get();
     foreach ($user as $roles) {
         echo $roles->name . '<br />';
+    }
+});
+
+//accessing the intermediate table (pivot table)
+Route::get('/user/pivot/', function () {
+   $users = User::find(1);
+    foreach ($users->roles as $role) {
+        echo $role->pivot->created_at;
     }
 });
