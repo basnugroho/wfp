@@ -4,6 +4,7 @@
 use App\Post;
 use App\User;
 use App\Role;
+use App\Country;
 
 /*
 |--------------------------------------------------------------------------
@@ -93,5 +94,13 @@ Route::get('/user/pivot/', function () {
    $users = User::find(1);
     foreach ($users->roles as $role) {
         echo $role->pivot->created_at;
+    }
+});
+
+//hasManyThrough()
+Route::get('/user/country/{id}', function ($id) {
+   $country = Country::find($id);
+    foreach ($country->posts as $post) {
+        echo $post->title . '<br />';
     }
 });
