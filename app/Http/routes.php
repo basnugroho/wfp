@@ -121,4 +121,8 @@ Route::get('post/{id}/photos', function ($id) {
     }
 });
 
-
+//polymhorpic inverse
+Route::get('photo/{id}/post', function ($id) {
+    $photo = Photo::findOrFail($id);
+    return $photo;
+});
