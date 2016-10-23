@@ -18,5 +18,10 @@ class Post extends Model
         //morph from what?
         return $this->morphMany('App\Photo', 'imagable');
     }
+
+    //morphToMany
+    public function tags () {
+        return $this->morphToMany('App\Tag', 'taggable');
+    }
 }
 

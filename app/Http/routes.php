@@ -62,6 +62,7 @@ Route::get('insert', function () {
 |--------------------------------------------------------------------------
 | Eloquent Relationship
 |--------------------------------------------------------------------------
+*/
 
 //hasOne()
 Route::get('/user/{id}/post', function ($id) {
@@ -80,7 +81,7 @@ Route::get('/posts', function () {
         echo $post->title . '<br />';
     }
 });
-*/
+
 
 //many to many
 Route::get('/user/{id}/roles', function ($id) {
@@ -126,3 +127,5 @@ Route::get('photo/{id}/post', function ($id) {
     $photo = Photo::findOrFail($id);
     return $photo;
 });
+
+//many to many polymhorpic
