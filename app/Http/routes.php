@@ -5,6 +5,7 @@ use App\Post;
 use App\User;
 use App\Role;
 use App\Country;
+use App\Photo;
 
 /*
 |--------------------------------------------------------------------------
@@ -104,3 +105,20 @@ Route::get('/user/country/{id}', function ($id) {
         echo $post->title . '<br />';
     }
 });
+
+//polymhorpic Relations
+Route::get('user/photos', function () {
+    $user = User::find(1);
+    foreach ($user->photos as $photo) {
+        return $photo->path;
+    }
+});
+
+Route::get('post/{id}/photos', function ($id) {
+    $post = Post::find($id);
+    foreach ($post->photos as $photo) {
+        echo $photo->path . '<br />';
+    }
+});
+
+

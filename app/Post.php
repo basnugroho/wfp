@@ -12,4 +12,11 @@ class Post extends Model
     public function user () {
         return $this->belongsTo('App\User');
     }
+
+    //morphMany
+    public function photos () {
+        //morph from what?
+        return $this->morphMany('App\Photo', 'imagable');
+    }
 }
+
