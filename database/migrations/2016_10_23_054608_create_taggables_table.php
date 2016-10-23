@@ -16,7 +16,7 @@ class CreateTaggablesTable extends Migration
             //$table->increments('id'); gak dibuthin
             $table->integer('tag_id');
             $table->integer('taggable_id');
-            $table->integer('taggable_type');
+            $table->string('taggable_type');
             //$table->timestamps(); gak dibuthin as well
         });
     }
