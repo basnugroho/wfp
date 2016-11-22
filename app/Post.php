@@ -14,6 +14,10 @@ class Post extends Model
         return $this->belongsTo('App\User');
     }
 
+    public function comments () {
+        return $this->hasMany('App\Post');
+    }
+
     //morphMany (Polymhorpic)
     public function photos () {
         //morph from what?

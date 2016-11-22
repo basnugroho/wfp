@@ -1,12 +1,13 @@
 <?php
 
-//import Modelnya dulu (berlaku di Controller juga)
+/*import Modelnya dulu (berlaku di Controller juga)
 use App\Post;
 use App\User;
 use App\Role;
 use App\Country;
 use App\Photo;
 use App\Tag;
+*/
 
 /*
 |--------------------------------------------------------------------------
@@ -23,12 +24,30 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+/*
+|--------------------------------------------------------------------------
+| Views
+|--------------------------------------------------------------------------
+
+
+Route::get('/contact', 'PostsController@contact');
+
+Route::get('/post/{id}/{name}', 'PostsController@showPost');
+
+*/
+/*
+|--------------------------------------------------------------------------
+| Blade
+|--------------------------------------------------------------------------
+*/
+
+
 
 /*
 |--------------------------------------------------------------------------
 | Eloquent
 |--------------------------------------------------------------------------
-*/
+
 
 //read
 Route::get('/read', function () {
@@ -58,12 +77,12 @@ Route::get('findmore', function () {
 Route::get('insert', function () {
    DB::insert('INSERT INTO posts(title, content) VALUES (?, ?)', ['Laravel is awesome with Bas', 'Laravel is the best thing that happened to PHP, PERIOD']);
 });
-
+*/
 /*
 |--------------------------------------------------------------------------
 | Eloquent Relationship
 |--------------------------------------------------------------------------
-*/
+
 
 //hasOne()
 Route::get('/user/{id}/post', function ($id) {
@@ -141,3 +160,38 @@ Route::get('/tag/post', function () {
    $tag = Tag::find(2);
     return $tag->name;
 });
+
+*/
+/*
+|--------------------------------------------------------------------------
+| Eloquent Relationship di kelas
+|--------------------------------------------------------------------------
+
+
+Route::get('post/{id}/comment', function () {
+   $comment = Post::find(1)->comments;
+    foreach ($comment as $comments) {
+        return var_dump($comments);
+        //print_r($comments);
+    }
+});
+
+//pengen tau dosen id=1, matkul apa aja?
+//$user = Dosen::find(1);
+//$mahasiswa = $user->$mahasiswa;
+//foreach ($mahasiswa as $m) {
+//    echo $m->pivot->nama;
+//}
+
+*/
+/*
+|--------------------------------------------------------------------------
+| CRUD Application
+|--------------------------------------------------------------------------
+*/
+Route::resource('/posts', 'PostsController');
+
+
+
+
+
